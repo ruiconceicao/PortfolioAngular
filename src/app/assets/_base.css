@@ -43,6 +43,15 @@ section>header>* {
     margin: 1% 0;
 }
 
+.light,
+[data-theme="dark"] .dark {
+    display: none;
+}
+
+[data-theme="dark"] .light {
+    display: inline;
+}
+
 /*****************************/
 /*****************************/
 /*|-----------------------|

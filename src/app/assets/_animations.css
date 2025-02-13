@@ -80,11 +80,11 @@ div#menuDrop[data-visible="false"] {
         transform: scale(1.4);
     }
 
-    .projectsContainer .projectBox {
+    app-project-card {
         transition: transform 0.2s, opacity 0.2s ease-out;
     }
 
-    .projectsContainer:has(.projectBox:not(:only-child):hover)>.projectBox:not(:hover) {
+    .projectsContainer:has(app-project-card:not(:only-child):hover)>app-project-card:not(:hover) {
         opacity: 0.3;
         transform: scale(0.95);
     }

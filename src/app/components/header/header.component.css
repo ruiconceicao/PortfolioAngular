@@ -68,15 +68,6 @@ nav.menu ul li a {
     z-index: 1;
 }
 
-.light,
-[data-theme="dark"] .dark {
-    display: none;
-}
-
-[data-theme="dark"] .light {
-    display: inline;
-}
-
 /*      |----------|
         |   LOGO   |
         |----------|*/
