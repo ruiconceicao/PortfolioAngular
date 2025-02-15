@@ -1,7 +1,7 @@
 @import url(app/assets/_typography.css);
-@import url(app/assets/_animations.css);
 @import url(app/assets/_variables.css);
 @import url(app/assets/_base.css);
+@import url(app/assets/_animations.css);
 
 /*|-----------------------------------|
   |                                   |
@@ -30,12 +30,12 @@
       height: 75vh;
     }
 
-    .about-html .linkedin-card {
+    app-linkedin-card {
       display: none;
     }
 
-    .about-html .about>.content {
-      width: 100%;
+    .about>.content {
+      width: 100% !important;
     }
   }
 

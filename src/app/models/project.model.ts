@@ -1,10 +1,11 @@
 export interface Project {
-  imgL: string;
-  imgD: string;
-  state: string;
-  title: string;
-  description: string;
-  techStack: string[];
-  previewUrl: string;
-  codeUrl: string;
+  id:Number
+  imgL: String;
+  imgD: String;
+  state: String;
+  title: String;
+  description: String;
+  techStack: String[];
+  previewUrl: String;
+  codeUrl: String;
 }

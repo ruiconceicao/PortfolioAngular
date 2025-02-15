@@ -66,7 +66,7 @@ div#menuDrop[data-visible="false"] {
 @media (hover: hover) and (pointer: fine) {
     .stackCard svg {
         transform: scale(1);
-        filter: saturate(0.20);
+        filter: saturate(0.5);
         transition: filter 0.25s, transform 0.25s ease-in;
     }
 
@@ -80,12 +80,12 @@ div#menuDrop[data-visible="false"] {
         transform: scale(1.4);
     }
 
-    app-project-card {
+    .projectBox {
         transition: transform 0.2s, opacity 0.2s ease-out;
     }
 
-    .projectsContainer:has(app-project-card:not(:only-child):hover)>app-project-card:not(:hover) {
-        opacity: 0.3;
+    .projectsContainer:has(.projectBox:not(:only-child):hover)>.projectBox:not(:hover) {
+        opacity: 0.5;
         transform: scale(0.95);
     }
 }
@@ -143,7 +143,7 @@ nav ul li a:focus svg path {
 }
 
 nav ul li a.currentPage:not(:hover) {
-    color: var(--gradientMid);
+    color: var(--gradientMid) !important;
 }
 
 .svgFitBg {

@@ -6,8 +6,8 @@
   |-------------------------|*/
 * {
     box-sizing: border-box;
-    transition-property: background-color, color, scrollbar-color;
     transition-duration: 0.25s;
+    transition-property: background-color, color, scrollbar-color;
 }
 
 html {
@@ -20,14 +20,13 @@ html {
 }
 
 body {
-    margin: 0;
-}
-
-div.container,
-div#menuDrop {
     width: 100%;
     max-width: var(--maxwidth);
     margin: 0 auto;
+}
+
+app-root,
+div#menuDrop {
 }
 
 main {
@@ -54,87 +53,3 @@ section>header>* {
 
 /*****************************/
 /*****************************/
-/*|-----------------------|
-  |                       |
-  |         _BASE         |
-  |   ABOUT.HTML STYLES   |
-  |                       |
-  |-----------------------|*/
-.about-html section>.content {
-    width: 60%;
-}
-
-/*  |-------------------|
-    |   ABOUT SECTION   |
-    |-------------------|*/
-.about-html .about {
-    display: flex;
-    justify-content: space-between;
-    gap: 2.5vw;
-}
-
-
-.about-html .about>.content>header * {
-    margin-top: 0;
-}
-
-.about-html .about article p {
-    margin: 0;
-}
-
-.about-html .linkedin-card {
-    max-width: 50%;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: var(--colorLinkedIn) 0 0 2.5rem;
-}
-
-.about-html .linkedin-card>header {
-    background-color: var(--colorLinkedIn);
-}
-
-.about-html .linkedin-card>header,
-.about-html .linkedin-card>.content {
-    padding: 1.5rem;
-}
-
-.about-html .linkedin-card>header>svg,
-.about-html .linkedin-card img {
-    width: clamp(7rem, 12.7vw, 8rem);
-    vertical-align: middle;
-}
-
-.about-html .linkedin-card>.content>.profile {
-    display: flex;
-    gap: 5%;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.about-html .linkedin-card>.content>.profile>.info>a p {
-    color: var(--colorP);
-    white-space: nowrap;
-    font-weight: var(--fontWeightSemiBold);
-    margin: 0;
-}
-
-.description * {
-    font-weight: var(--fontWeightRegular);
-}
-
-.about-html .linkedin-card img {
-    border-radius: 1rem;
-    width: clamp(7rem, 12.7vw, 8rem);
-}
-
-.about-html .linkedin-card a {
-    text-decoration: none;
-}
-
-.about-html .linkedin-card>div:last-child {
-    margin: 1.5rem;
-}
-
-/*  |--------------------------|
-    |   FIM DA ABOUT SECTION   |
-    |--------------------------|*/

@@ -5,8 +5,9 @@ import { Project } from '../models/project.model';
   providedIn: 'root',
 })
 export class ProjectService {
-  private projects: Project[] = [
+  projects: Project[] = [
     {
+      id: 0,
       imgL: 'https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/project1L.jpg',
       imgD: 'https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/project1D.jpg',
       state: 'Em desenvolvimento...',
@@ -17,12 +18,30 @@ export class ProjectService {
       previewUrl: '',
       codeUrl: 'https://github.com/ruiconceicao/Portfolio',
     },
-    
+    {
+      id: 1,
+      imgL: 'https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/project1L.jpg',
+      imgD: 'https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/project1D.jpg',
+      state: 'Em desenvolvimento...',
+      title: 'Pizzaria do raul',
+      description:
+        'Este projeto serve como o meu portfólio digital que reúne os meus projetos.',
+      techStack: [],
+      previewUrl: '',
+      codeUrl: 'https://github.com/ruiconceicao/Portfolio',
+    },
+    {
+      id: 2,
+      imgL: 'https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/project1L.jpg',
+      imgD: 'https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/project1D.jpg',
+      state: 'Estável',
+      title: 'skr',
+      description:
+        'Este projeto serve como o meu portfólio digital .',
+      techStack: [],
+      previewUrl: '',
+      codeUrl: 'https://github.com/ruiconceicao/Portfolio',
+    },
   ];
-
-  getProjects(): Project[] {
-    return this.projects;
-  }
-
   constructor() {}
 }

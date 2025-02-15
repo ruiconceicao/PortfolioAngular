@@ -5,10 +5,11 @@ import { AboutComponent } from './pages/about/about.component';
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    pathMatch: 'full',
+    component: HomeComponent,
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
   },
 ];
