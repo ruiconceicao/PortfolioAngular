@@ -1,20 +1,20 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Project } from '../models/project.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectService {
-  projects: Project[] = [
+  projects = signal<Project[]> ([
     {
       id: 0,
       imgL: 'https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/project1L.jpg',
       imgD: 'https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/project1D.jpg',
       state: 'Em desenvolvimento...',
-      title: 'Portfolio',
+      title: 'Portfólio',
       description:
         'Este projeto serve como o meu portfólio digital que reúne os meus projetos, experiência e formação, oferecendo um espaço organizado para consulta e um meio de contacto profissional.',
-      techStack: [],
+      techStack: ['angular', 'typescript', 'javascript', 'css', 'html'],
       previewUrl: '',
       codeUrl: 'https://github.com/ruiconceicao/Portfolio',
     },
@@ -42,6 +42,7 @@ export class ProjectService {
       previewUrl: '',
       codeUrl: 'https://github.com/ruiconceicao/Portfolio',
     },
-  ];
+  ]);
+  
   constructor() {}
 }

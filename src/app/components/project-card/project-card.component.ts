@@ -1,7 +1,8 @@
-import { Component, inject, Input, OnInit, signal } from '@angular/core';
+import { Component, inject, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
+import { SvgService,  } from '../../services/svg.service';
 
 @Component({
   selector: 'app-project-card',
@@ -10,12 +11,10 @@ import { ProjectService } from '../../services/project.service';
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css',
 })
-export class ProjectCardComponent implements OnInit {
-  @Input() project!: Project;
-  projectService: ProjectService = inject(ProjectService);
-  projects = signal<Project[]>([]);
+export class ProjectCardComponent {
+  projectService = inject(ProjectService);
+  projects = this.projectService.projects;
 
-  ngOnInit(): void {
-    this.projects.set(this.projectService.projects);
-  }
+  svgService = inject(SvgService);
+  svgs = this.svgService.svgs;
 }

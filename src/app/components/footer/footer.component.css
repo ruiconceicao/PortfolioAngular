@@ -1,6 +1,6 @@
 /*  |------------|
-    |   FOOTER   |
-    |------------|*/
+|   FOOTER   |
+|------------|*/
 footer {
     padding: 0 1%;
 }
@@ -13,7 +13,7 @@ footer {
     flex-wrap: wrap;
     border-bottom: 1px solid var(--colorBorder);
     padding-bottom: 2.5vh;
-
+    
 }
 
 .contacts {
@@ -33,7 +33,7 @@ footer {
 .socials *,
 .bottomFooter * {
     color: var(--colorFooter);
-    fill: var(--colorFooter);
+    stroke: var(--colorFooter);
     font-weight: var(--fontWeightRegular);
     font-family: "DM Sans", serif;
     margin: 0;
@@ -53,6 +53,9 @@ footer a {
     gap: 5vw;
     padding: 0;
     margin: 5% 0;
+}
+svg {
+    width: clamp(2.5rem, calc(0.52vw + 23.333px), 3rem);
 }
 
 /*  |-------------------|

@@ -6,106 +6,107 @@
   |-----------------------|*/
 
 @keyframes dropDown {
-    0% {
-        transform: translateY(-100%);
-    }
+  0% {
+    transform: translateY(-100%);
+  }
 
-    100% {
-        visibility: visible;
-        transform: translateY(0);
-    }
+  100% {
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 
 @keyframes dropUp {
-    0% {
-        visibility: visible;
-        transform: translateY(0);
-    }
+  0% {
+    visibility: visible;
+    transform: translateY(0);
+  }
 
-    100% {
-        transform: translateY(-200%);
-        visibility: hidden;
-        display: none;
-    }
+  100% {
+    transform: translateY(-200%);
+    visibility: hidden;
+    display: none;
+  }
 }
 
 div#menuDrop[data-visible="true"] {
-    animation: dropDown 0.5s ease forwards;
+  animation: dropDown 0.5s ease forwards;
 }
 
 div#menuDrop[data-visible="false"] {
-    animation: dropUp 0.3s ease forwards;
+  animation: dropUp 0.3s ease forwards;
 }
 
 @keyframes pop-in {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.01);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.01);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 @keyframes pop {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    30% {
-        transform: scale(1.4);
-    }
+  30% {
+    transform: scale(1.4);
+  }
 
-    100% {
-        transform: scale(1.2);
-    }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .stackCard svg {
-        transform: scale(1);
-        filter: saturate(0.5);
-        transition: filter 0.25s, transform 0.25s ease-in;
-    }
+  .stackCard svg {
+    transform: scale(1);
+    filter: saturate(0.5);
+    transition: filter 0.25s, transform 0.25s ease-in;
+  }
 
-    #sectionStack:hover svg {
-        animation: pop 0.4s ease-in-out;
-        transform: scale(1.2);
-        filter: saturate(1);
-    }
+  #sectionStack:hover svg {
+    animation: pop 0.4s ease-in-out;
+    transform: scale(1.2);
+    filter: saturate(.9);
+  }
 
-    #sectionStack .stackCard:hover svg {
-        transform: scale(1.4);
-    }
+  #sectionStack .stackCard:hover svg {
+    transform: scale(1.4);
+  }
 
-    .projectBox {
-        transition: transform 0.2s, opacity 0.2s ease-out;
-    }
+  .projectBox {
+    transition: transform 0.2s, opacity 0.2s ease-out;
+  }
 
-    .projectsContainer:has(.projectBox:not(:only-child):hover)>.projectBox:not(:hover) {
-        opacity: 0.5;
-        transform: scale(0.95);
-    }
+  .projectsContainer:has(.projectBox:not(:only-child):hover)
+    > .projectBox:not(:hover) {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
 }
 
 nav ul li a,
 .underline-animation {
-    position: relative;
+  position: relative;
 }
 
-nav ul li a::before,
-.underline-animation::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 3px;
-    background-color: var(--gradientMid);
-    transition: width 0.25s ease-in-out;
-    border-radius: 20px;
+nav ul li a:not(:has(svg))::before,
+.underline-animation::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: var(--gradientMid);
+  transition: width 0.25s ease-in-out;
+  border-radius: 20px;
 }
 
 nav ul li a.currentPage::before,
@@ -115,37 +116,45 @@ a:hover .underline-animation::before,
 a:focus .underline-animation::before,
 .underline-animation:hover::before,
 .underline-animation:focus::before {
-    width: 100%;
+  width: 100%;
 }
 
 .techStackSVG .stackSVG,
 .projectLinks .stackSVG {
-    fill: var(--reversedBackground);
-}
-
-nav ul li a:hover svg path,
-nav ul li a:focus svg path {
-    fill: var(--gradientMid);
+  fill: var(--reversedBackground);
 }
 
 .socials a:hover p,
-.socials a:focus p,
-.socials a:hover svg path,
-.socials a:focus svg path {
-    color: var(--colorHoverMenu);
-    fill: var(--colorHoverMenu);
-    font-weight: var(--fontWeightMedium);
-    text-shadow: 1px 1px 2px var(--colorHoverMenu);
+.socials a:focus p{
+  color: var(--colorHoverMenu);
+  text-shadow: 0px 0px 1px var(--colorHoverMenu);
 }
 
 .primaryHeader button.toggle:hover svg {
-    fill: var(--colorH2);
+  fill: var(--colorH2);
 }
 
 nav ul li a.currentPage:not(:hover) {
-    color: var(--gradientMid) !important;
+  color: var(--gradientMid) !important;
 }
 
-.svgFitBg {
-    fill: var(--background);
+.svgFitBgFill {
+  fill: var(--background) !important;
+}
+.svgFitBgStroke {
+  stroke: var(--background) !important;
+}
+.svgBgFill {
+  fill: var(--reversedBackground) !important;
+}
+.svgBgStroke {
+  stroke: var(--reversedBackground) !important;
+}
+.linkedin-icon:hover *,
+.linkedin-icon:focus *{
+  stroke: rgba(60, 130, 245, .5) !important;
+}
+.github-icon:hover *,
+.github-icon:focus *{
+  stroke: rgba(111, 115, 195, 1) !important;
 }

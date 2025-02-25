@@ -48,7 +48,7 @@
     padding: 0 0 5% 0;
 }
 
-.techStackSVG svg {
+.techStackSVG>div {
     width: calc(var(--fontSizeP) * 1.75);
 }
 
@@ -68,7 +68,7 @@
 }
 
 .projectActions .projectLinks svg {
-    width: calc(var(--fontSizeSmall) + 5px);
+    width: calc(var(--fontSizeSmall) * 1.25);
 }
 
 .projectLinks small {
